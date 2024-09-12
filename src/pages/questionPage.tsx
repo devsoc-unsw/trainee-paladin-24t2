@@ -42,10 +42,10 @@ interface jsonInterface {
 // Turns the JSON representations of questions into an object that can easily
 // be used in the quiz.
 // Outputs an array of questionDetail object members
-function questionSetup() {
+function questionSetup(loadData) { // Issue where the code doesnt
     let questions: questionDetail[] = [];
 
-    const loadData = jsonData as jsonInterface;
+    //const loadData = jsonData as jsonInterface;
 
     for (let i in loadData.questions) {
         let currQ = loadData.questions[i]
@@ -86,6 +86,8 @@ function questionSetup() {
 // Displays the screen that hosts all the questions and runs all the calculations
 // to determine the user's personality
 function Page() {
+    const loadData = jsonData as jsonInterface;
+
     let userPoints: pointAssignment = {
         weeb: 0,
         yapper: 0,
@@ -97,7 +99,8 @@ function Page() {
         aesthetics: 0,
     }
 
-    let questions = questionSetup();
+    let questions = questionSetup(loadData);
+    let numQ = loadData.numOfQuestions
 
     // Run the logic above to get the questions loaded to the questionDetail interface
     // Then place it into page
@@ -105,13 +108,124 @@ function Page() {
     
 
     return (
-        <>
-            <div>
+        <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100vh',
+            background: '#0E0E0E'
+        }}>
+            <div style={{
+                width: 1076,
+                height: 573,
+                position: 'relative',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}>
+                <div style={{
+                    width: 1071,
+                    height: 159,
+                    padding: '8px 12px',
+                    background: '#171717',
+                    borderRadius: 20,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: 20
+                }}>
+                    <div style={{
+                        width: 945,
+                        textAlign: 'center',
+                        color: 'white',
+                        fontSize: 32,
+                        fontFamily: 'Readex Pro',
+                        fontWeight: '300',
+                        wordWrap: 'break-word'
+                    }}>
+                        Which emotion best describes you when you find a small bug in your code that you spent hours finding?
+                    </div>
+                </div>
+                <div style={{
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                }}>
+                    <button style={{
+                        width: 1071,
+                        height: 96,
+                        marginBottom: 10,
+                        padding: '8px 12px',
+                        background: 'rgba(200.81, 200.81, 200.81, 0.30)',
+                        borderRadius: 106,
+                        border: '4px white solid',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        textAlign: 'center',
+                        color: 'white',
+                        fontSize: 36,
+                        fontFamily: 'Readex Pro',
+                        fontWeight: '400',
+                        cursor: 'pointer',
+                        outline: 'none'
+                    }}>
+                        Dumbfounded
+                    </button>
+                    <button style={{
+                        width: 1071,
+                        height: 96,
+                        marginBottom: 10,
+                        padding: '8px 12px',
+                        background: 'rgba(200.81, 200.81, 200.81, 0.30)',
+                        borderRadius: 106,
+                        border: '4px white solid',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        textAlign: 'center',
+                        color: 'white',
+                        fontSize: 36,
+                        fontFamily: 'Readex Pro',
+                        fontWeight: '400',
+                        cursor: 'pointer',
+                        outline: 'none'
+                    }}>
+                        Relieved
+                    </button>
+                    <button style={{
+                        width: 1071,
+                        height: 96,
+                        padding: '8px 12px',
+                        background: 'rgba(200.81, 200.81, 200.81, 0.30)',
+                        borderRadius: 106,
+                        border: '4px white solid',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        textAlign: 'center',
+                        color: 'white',
+                        fontSize: 36,
+                        fontFamily: 'Readex Pro',
+                        fontWeight: '400',
+                        cursor: 'pointer',
+                        outline: 'none'
+                    }}>
+                        Diabolically furious
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+            {/* <div>
                 <h1>THE FULL JSON</h1>
                 {questions.map((q, index) => (
                     <div key={index}>
                         <h2>Question {q.number}: {q.name}</h2>
-                        <ul>
+                        <ul >
                             {q.answers.map((answer, i) => (
                                 <li key={i}>
                                     {answer.title}
@@ -130,9 +244,7 @@ function Page() {
                         </ul>
                     </div>
                 ))}
-            </div>
-        </>
-    )
+            </div>*/}
 }
 
 
