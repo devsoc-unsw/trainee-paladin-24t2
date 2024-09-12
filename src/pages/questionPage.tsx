@@ -1,6 +1,6 @@
+import React from 'react';
 import jsonData from '../pages/test.json';
-import  '..App.css'
-import '..index.css'
+
 //import questionDetail from './src/pages/questions.tsx'
 
 // JUST IMPORT THIS INTO app.tsx and RUN ON THE ONE PAGE :))
@@ -37,7 +37,7 @@ interface jsonInterface {
 // Outputs an array of questionDetail object members
 // 
 function questionSetup() {
-    let questions = [];
+    let questions: questionDetail[] = [];
 
     const loadData = jsonData as jsonInterface;
     const num = loadData.numOfQuestions;
@@ -64,22 +64,45 @@ function questionSetup() {
         };
         questions.push(question);
     }
-    return {
-        questions
-    }
+    return questions;
 }
 
 function Page() {
     // Run the logic above to get the questions loaded to the questionDetail interface
     // Then place it into page
 
-    return {
-        <div>
-            {/* Your JSX content goes here */}
-            <h1>Hello, world!</h1>
-        <div/>
-    }
+    let questions = questionSetup();
+
+    return (
+        <>
+            <div >
+                {/* Currently just displaying the question details in a nice format */}
+                <h1>THE FULL JSON</h1>
+                {questions.map((q, index) => (
+                <div key={index}>
+                    <h2>Question {q.Number}: {q.Name}</h2>
+                    <ul>
+                        {q.Answers.map((answer, i) => (
+                            <li key={i}>{answer}</li>
+                        ))}
+                    </ul>
+                    <h3>Points Allocation:</h3>
+                    <ul>
+                        <li>Weeb: {q.Points.weeb}</li>
+                        <li>Yapper: {q.Points.yapper}</li>
+                        <li>Sage: {q.Points.sage}</li>
+                        <li>Atlassian: {q.Points.atlassian}</li>
+                        <li>Money: {q.Points.money}</li>
+                        <li>Skeptic: {q.Points.skeptic}</li>
+                        <li>Long As It Works: {q.Points.longAsItWorks}</li>
+                        <li>Aesthetics: {q.Points.aesthetics}</li>
+                    </ul>
+                </div>
+            ))}
+            </div>
+        </>
+    )
 }
 
 
-export default Page
+export default Page;
