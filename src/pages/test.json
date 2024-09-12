@@ -1,6 +1,8 @@
 {
-  "0": {
-    "Name": "sample",
+  "numOfQuestions": 2,
+  "questions": [
+    {
+    "Name": "sample Q 1",
     "Number": 1,
     "Answers": [
       "ans 1",
@@ -18,8 +20,8 @@
       0
     ]
   },
-  "1": {
-    "Name": "sample 2",
+  {
+    "Name": "sample Q 2",
     "Number": 2,
     "Answers": [
       "ans 1",
@@ -37,4 +39,5 @@
       0
     ]
   }
+]
 }

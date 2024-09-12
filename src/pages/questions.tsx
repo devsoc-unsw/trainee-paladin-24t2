@@ -1,5 +1,7 @@
 import './index.css'
 
+// DEFUNCT REMOVE THIS FILE AT A LATER DATE
+
 interface pointAssignment {
     weeb: number,
     yapper: number,
