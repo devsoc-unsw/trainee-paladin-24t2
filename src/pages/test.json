@@ -2,42 +2,94 @@
   "numOfQuestions": 2,
   "questions": [
     {
-    "Name": "sample Q 1",
-    "Number": 1,
-    "Answers": [
-      "ans 1",
-      "ans 2",
-      "ans 3"
-    ],
-    "Points": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "Name": "sample Q 2",
-    "Number": 2,
-    "Answers": [
-      "ans 1",
-      "ans 2",
-      "ans 3"
-    ],
-    "Points": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ]
-  }
-]
+      "name": "sample Q 1: What are apples",
+      "number": 1,
+      "answers": [
+        {
+          "title": "fruits",
+          "points": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "title": "vegetables",
+          "points": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "title": "dinnerware",
+          "points": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sample Q 2: What are cucumbers",
+      "number": 2,
+      "answers": [
+        {
+          "title": "fruits",
+          "points": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "title": "vegetables",
+          "points": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "title": "dinnerware",
+          "points": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ]
 }
