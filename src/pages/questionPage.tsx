@@ -1,8 +1,6 @@
 import React from 'react';
 import jsonData from '../pages/test.json';
 
-//import questionDetail from './src/pages/questions.tsx'
-
 // JUST IMPORT THIS INTO app.tsx and RUN ON THE ONE PAGE :))
 
 interface pointAssignment {

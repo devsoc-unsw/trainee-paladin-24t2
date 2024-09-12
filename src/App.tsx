@@ -8,6 +8,13 @@ import Page from "./pages/questionPage.tsx"
 function App() {
   const [count, setCount] = useState(0)
 
+  // Used to Clear conent
+  const [isContentVisible, setContentVisible] = useState(false);
+  const handleDeleteContent = () => {
+    isContentVisible === true ? setContentVisible(false) : setContentVisible(true); 
+  };
+
+
   return (
     <>
       <div>
@@ -31,10 +38,16 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
 
-      {/* Testing for question function */}
-      <div className="card">
-        <Page />  {/* Render the Page component here */}
-      </div>
+      <button onClick={handleDeleteContent}>
+        DELETE
+      </button>
+
+      {/* Conditionally render the Page component */}
+      {isContentVisible && (
+        <div className="card">
+          <Page />
+        </div>
+      )}
       
     </>
   )
