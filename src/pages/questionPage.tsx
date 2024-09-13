@@ -1,7 +1,10 @@
-import React from 'react';
+import { useState, useEffect } from "react";
+import './questionPage.css';
 import jsonData from '../pages/test.json';
 
 // JUST IMPORT THIS INTO app.tsx and RUN ON THE ONE PAGE :))
+
+// INTERFACE
 
 interface pointAssignment {
     weeb: number,
@@ -38,6 +41,8 @@ interface jsonInterface {
         }[];
     }[]
 };
+
+// FUNCTIONS
 
 // Turns the JSON representations of questions into an object that can easily
 // be used in the quiz.
@@ -87,8 +92,11 @@ function questionSetup(loadData) { // Issue where the code doesnt
 // to determine the user's personality
 function Page() {
     const loadData = jsonData as jsonInterface;
+    let questions = questionSetup(loadData);
 
-    let userPoints: pointAssignment = {
+    // Hooks needed to track question and user points
+    const [questionNumber, setQuestionNumber] = useState(0);
+    const [userPoints, setUserPoints] = useState<pointAssignment>({
         weeb: 0,
         yapper: 0,
         sage: 0,
@@ -97,155 +105,54 @@ function Page() {
         skeptic: 0,
         longAsItWorks: 0,
         aesthetics: 0,
-    }
+    });
 
-    let questions = questionSetup(loadData);
-    let numQ = loadData.numOfQuestions
+    const handleButtonClick = (answerPoints: pointAssignment) => {
+        // Update user points based on selected answer
+        setUserPoints(prevPoints => ({
+            weeb: prevPoints.weeb + answerPoints.weeb,
+            yapper: prevPoints.yapper + answerPoints.yapper,
+            sage: prevPoints.sage + answerPoints.sage,
+            atlassian: prevPoints.atlassian + answerPoints.atlassian,
+            money: prevPoints.money + answerPoints.money,
+            skeptic: prevPoints.skeptic + answerPoints.skeptic,
+            longAsItWorks: prevPoints.longAsItWorks + answerPoints.longAsItWorks,
+            aesthetics: prevPoints.aesthetics + answerPoints.aesthetics,
+        }));
 
-    // Run the logic above to get the questions loaded to the questionDetail interface
-    // Then place it into page
+        // Move to the next question or end the quiz
+        if (questionNumber < questions.length - 1) {
+            setQuestionNumber(prevQuestion => prevQuestion + 1);
+        } else {
+            // Quiz is complete, handle end of quiz scenario (e.g., show results)
+            console.log('Quiz complete. User points:', userPoints);
+        }
+    };
 
-    
+    const currentQuestion = questions[questionNumber];
 
     return (
-        <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '100vh',
-            background: '#0E0E0E'
-        }}>
-            <div style={{
-                width: 1076,
-                height: 573,
-                position: 'relative',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center'
-            }}>
-                <div style={{
-                    width: 1071,
-                    height: 159,
-                    padding: '8px 12px',
-                    background: '#171717',
-                    borderRadius: 20,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: 20
-                }}>
-                    <div style={{
-                        width: 945,
-                        textAlign: 'center',
-                        color: 'white',
-                        fontSize: 32,
-                        fontFamily: 'Readex Pro',
-                        fontWeight: '300',
-                        wordWrap: 'break-word'
-                    }}>
-                        Which emotion best describes you when you find a small bug in your code that you spent hours finding?
+        <div className = "mainBody">
+            <div className = 'table'>
+                <div className = "questionDiv">
+                    <div className = "questionText">
+                        {currentQuestion.name}
                     </div>
                 </div>
-                <div style={{
-                    width: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}>
-                    <button style={{
-                        width: 1071,
-                        height: 96,
-                        marginBottom: 10,
-                        padding: '8px 12px',
-                        background: 'rgba(200.81, 200.81, 200.81, 0.30)',
-                        borderRadius: 106,
-                        border: '4px white solid',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        textAlign: 'center',
-                        color: 'white',
-                        fontSize: 36,
-                        fontFamily: 'Readex Pro',
-                        fontWeight: '400',
-                        cursor: 'pointer',
-                        outline: 'none'
-                    }}>
-                        Dumbfounded
-                    </button>
-                    <button style={{
-                        width: 1071,
-                        height: 96,
-                        marginBottom: 10,
-                        padding: '8px 12px',
-                        background: 'rgba(200.81, 200.81, 200.81, 0.30)',
-                        borderRadius: 106,
-                        border: '4px white solid',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        textAlign: 'center',
-                        color: 'white',
-                        fontSize: 36,
-                        fontFamily: 'Readex Pro',
-                        fontWeight: '400',
-                        cursor: 'pointer',
-                        outline: 'none'
-                    }}>
-                        Relieved
-                    </button>
-                    <button style={{
-                        width: 1071,
-                        height: 96,
-                        padding: '8px 12px',
-                        background: 'rgba(200.81, 200.81, 200.81, 0.30)',
-                        borderRadius: 106,
-                        border: '4px white solid',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        textAlign: 'center',
-                        color: 'white',
-                        fontSize: 36,
-                        fontFamily: 'Readex Pro',
-                        fontWeight: '400',
-                        cursor: 'pointer',
-                        outline: 'none'
-                    }}>
-                        Diabolically furious
-                    </button>
+                <div className = "buttonDiv">
+                    {currentQuestion.answers.map((answer, index) => (
+                        <button
+                            key={index}
+                            className="answerButton"
+                            onClick={() => handleButtonClick(answer.points)}
+                        >
+                            {answer.title}
+                        </button>
+                    ))}
                 </div>
             </div>
         </div>
     );
-            {/* <div>
-                <h1>THE FULL JSON</h1>
-                {questions.map((q, index) => (
-                    <div key={index}>
-                        <h2>Question {q.number}: {q.name}</h2>
-                        <ul >
-                            {q.answers.map((answer, i) => (
-                                <li key={i}>
-                                    {answer.title}
-                                    <ul>
-                                        <li>Weeb: {answer.points.weeb}</li>
-                                        <li>Yapper: {answer.points.yapper}</li>
-                                        <li>Sage: {answer.points.sage}</li>
-                                        <li>Atlassian: {answer.points.atlassian}</li>
-                                        <li>Money: {answer.points.money}</li>
-                                        <li>Skeptic: {answer.points.skeptic}</li>
-                                        <li>Long As It Works: {answer.points.longAsItWorks}</li>
-                                        <li>Aesthetics: {answer.points.aesthetics}</li>
-                                    </ul>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-            </div>*/}
 }
-
 
 export default Page;
