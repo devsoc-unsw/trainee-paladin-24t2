@@ -34,7 +34,11 @@ function App() {
 
       {/* Conditionally render the Page component on button press */}
       {isContentVisible && (
-        <Page />
+        <div>
+          <Page />
+          <ParticlesComponent />
+        </div>
+        
       )}
       
     </>
