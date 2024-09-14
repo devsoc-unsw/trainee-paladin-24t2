@@ -9,19 +9,19 @@
             "answers": [
                 {
                     "title": "VSCode",
-                    "points": [0, 0, 0, 0, 0, 0, 0, 10]
+                    "points": [1, 0, 4, 0, 0, 0, 0, 5]
                 },
                 {
                     "title": "VIM",
-                    "points": [0, 5, 8, 7, 0, 6, 0, 0]
+                    "points": [1, 5, 2, 5, 0, 0, 0, 0]
                 },
                 {
                     "title": "Gedit / whatever’s on VLAB tbh",
-                    "points": [0, 6, 0, 0, 10, 7, 0, 0]
+                    "points": [1, 4, 0, 0, 5, 3, 0, 0]
                 },
                 {
                     "title": "No preference",
-                    "points": [0, 0, 0, 0, 0, 0, 10, 0]
+                    "points": [1, 0, 0, 0, 0, 0, 5, 0]
                 }
             ]
         },
@@ -33,19 +33,19 @@
             "answers": [
                 {
                     "title": "Write some documentation and comments for each function",
-                    "points": [0, 8, 9, 0, 0, 0, 0, 0]
+                    "points": [0, 5, 0, 5, 1, 0, 0, 0]
                 },
                 {
                     "title": "Start programming without any regard for style.",
-                    "points": [0, 0, 8, 0, 0, 9, 8, 0]
+                    "points": [1, 0, 3, 0, 1, 5, 5, 0]
                 },
                 {
                     "title": "Start programming but spend time consistently maintaining style",
-                    "points": [0, 0, 0, 0, 0, 0, 0, 10]
+                    "points": [1, 0, 0, 0, 1, 0, 0, 5]
                 },
                 {
                     "title": "Procrastinate till the last day",
-                    "points": [0, 0, 0, 0, 0, 0, 0, 0]
+                    "points": [4, 0, 0, 0, 1, 0, 0, 0]
                 }
             ]
         },
@@ -57,15 +57,15 @@
             "answers": [
                 {
                     "title": "Spam a lot of printf and console.log",
-                    "points": [0, 0, 8, 0, 0, 10, 8, 0]
+                    "points": [2, 0, 5, 0, 0, 5, 5, 0]
                 },
                 {
                     "title": "Elegantly use breakpoints, watch expressions and step-by-step executions",
-                    "points": [0, 8, 0, 10, 0, 0, 0, 9]
+                    "points": [2, 5, 0, 5, 0, 0, 0, 4]
                 },
                 {
-                    "title": "Smth else",
-                    "points": [0, 0, 0, 0, 0, 0, 0, 0]
+                    "title": "Go to Stack Overflow",
+                    "points": [2, 0, 0, 3, 0, 0, 3, 0]
                 }
             ]
         },
@@ -76,36 +76,36 @@
             "subtitle": "There are 10 kinds of people who understand binary",
             "answers": [
                 {
-                    "title": "Lets me make the best/most efficient use of the computer's resources",
-                    "points": [0, 0, 10, 0, 0, 0, 0, 0]
+                    "title": "Lets me make the most efficient use of the computer's resources",
+                    "points": [3, 4, 0, 5, 1, 2, 2, 0]
                 },
                 {
-                    "title": "Lets anyone program (high level or smth)",
-                    "points": [0, 0, 0, 10, 0, 0, 0, 0]
+                    "title": "Be high level and lets anyone program",
+                    "points": [1, 2, 5, 2, 4, 3, 5, 3]
                 },
                 {
-                    "title": "Doesn't matter",
-                    "points": [0, 0, 0, 0, 0, 0, 10, 0]
+                    "title": "Is haskell/assembly",
+                    "points": [1, 5, 0, 5, 0, 0, 0, 0]
                 }
             ]
         },
         {
-            "name": "White space, indentation and spacing should be used…",
+            "name": "Proper white space, indentation and spacing should be used…",
             "number": 5,
             "title": "Style 💀",
             "subtitle": "wheres the whitespace?",
             "answers": [
                 {
                     "title": "Sparingly",
-                    "points": [0, 0, 0, 0, 0, 0, 0, 10]
+                    "points": [0, 0, 4, 0, 0, 2, 0, 2]
                 },
                 {
                     "title": "Everywhere",
-                    "points": [0, 0, 0, 0, 0, 0, 0, 10]
+                    "points": [0, 4, 1, 4, 1, 0, 0, 5]
                 },
                 {
                     "title": "Randomly",
-                    "points": [0, 0, 0, 0, 0, 10, 0, 0]
+                    "points": [2, 0, 1, 0, 0, 5, 5, 0]
                 }
             ]
         },
@@ -117,15 +117,15 @@
             "answers": [
                 {
                     "title": "To explain any ambiguity in a function/operation",
-                    "points": [0, 0, 0, 10, 0, 0, 0, 0]
+                    "points": [3, 5, 1, 5, 1, 0, 0, 3]
                 },
                 {
                     "title": "To explain EVERYTHING",
-                    "points": [0, 0, 10, 0, 0, 0, 0, 0]
+                    "points": [2, 1, 5, 0, 0, 0, 0, 0]
                 },
                 {
                     "title": "What are comments?",
-                    "points": [0, 0, 0, 0, 0, 10, 10, 0]
+                    "points": [0, 0, 0, 0, 0, 5, 5, 0]
                 }
             ]
         },{
@@ -136,19 +136,19 @@
             "answers": [
                 {
                     "title": "Feel sadge & just graduate without one",
-                    "points": [0, 0, 0, 10, 0, 0, 0, 0]
+                    "points": [0, 0, 3, 0, 0, 0, 0, 0]
                 },
                 {
                     "title": "Kill for one 🔪🩸",
-                    "points": [0, 0, 0, 10, 0, 0, 0, 0]
+                    "points": [5, 0, 0, 0, 0, 0, 4, 0]
                 },
                 {
                     "title": "BACK ON THE LEETCODE GRIND 💪",
-                    "points": [0, 0, 10, 0, 0, 0, 0, 0]
+                    "points": [0, 5, 0, 5, 0, 0, 0, 0]
                 },
                 {
                     "title": "Beg friends for recommendations",
-                    "points": [0, 0, 0, 0, 0, 10, 10, 0]
+                    "points": [2, 2, 0, 0, 5, 3, 0, 0]
                 }
             ]
         },{
@@ -159,15 +159,31 @@
             "answers": [
                 {
                     "title": "COMMIT THE ALL NIGHTER!!!!",
-                    "points": [0, 0, 0, 10, 0, 0, 0, 0]
+                    "points": [4, 5, 2, 5, 0, 0, 3, 0]
                 },
                 {
                     "title": "Sleep and hope for the best.",
-                    "points": [0, 0, 10, 0, 0, 0, 0, 0]
+                    "points": [0, 0, 2, 0, 0, 0, 3, 0]
                 },
                 {
                     "title": "Go back and procrastinate again!",
-                    "points": [0, 0, 0, 0, 0, 10, 10, 0]
+                    "points": [0, 0, 3, 0, 0, 0, 0, 0]
+                }
+            ]
+        },
+        {
+            "name": "Do you like anime?",
+            "number": 9,
+            "title": "WEEB",
+            "subtitle": "uWu + random cat noises 🐱",
+            "answers": [
+                {
+                    "title": "Yes",
+                    "points": [1000, 0, 0, 0, 0, 0, 0, 0]
+                },
+                {
+                    "title": "No",
+                    "points": [0, 0, 0, 0, 0, 0, 0, 0]
                 }
             ]
         }
