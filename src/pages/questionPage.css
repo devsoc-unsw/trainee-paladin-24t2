@@ -1,4 +1,3 @@
-/* Ensures the entire screen is used and content is centered */
 .mainBody {
     display: flex;
     justify-content: center;
@@ -19,30 +18,31 @@
     justify-content: center;
 }
 
-/* Styles for the question container */
 .questionDiv {
     width: 100%;
-    max-width: 1071px;
-    height: auto;
-    padding: 8px 12px;
+    max-width: 1071px; /* Constrain maximum width */
+    height: 150px; /* Fixed height for the container */
+    padding: 8px 15px; /* Padding inside the container */
     background: #171717;
     border-radius: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
     margin-bottom: 20px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    overflow: hidden; /* Hide any overflow */
 }
 
-/* Styles for the question text */
 .questionText {
-    width: 100%;
-    max-width: 945px;
-    text-align: center;
+    width: 100%; /* Full width of the parent */
+    text-align: center; /* Center text horizontally */
     color: white;
-    font-size: 32px;
+    font-size: 36px; /* Starting font size */
     font-family: 'Readex Pro', sans-serif;
     font-weight: 300;
-    word-wrap: break-word;
+    line-height: 1.2; /* Adjust line height for readability */
+    overflow: hidden; /* Hide overflow text */
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 /* Center the buttons in a column */

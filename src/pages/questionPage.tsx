@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import './questionPage.css';
-import jsonData from '../pages/test.json';
+// import jsonData from '../pages/test.json';
+import jsonData from '../pages/questions.json';
+
 
 // JUST IMPORT THIS INTO app.tsx and RUN ON THE ONE PAGE :))
 
@@ -50,8 +52,6 @@ interface jsonInterface {
 function questionSetup(loadData) { // Issue where the code doesnt
     let questions: questionDetail[] = [];
 
-    //const loadData = jsonData as jsonInterface;
-
     for (let i in loadData.questions) {
         let currQ = loadData.questions[i]
 
@@ -85,6 +85,38 @@ function questionSetup(loadData) { // Issue where the code doesnt
         questions.push(question);
     }
     return questions;
+}
+
+
+function adjustFontSize() {
+    const questionText = document.querySelector('.questionText') as HTMLElement;
+    if (!questionText) return;
+
+    const containerWidth = questionText.parentElement?.clientWidth || 0;
+    const containerHeight = questionText.parentElement?.clientHeight || 0;
+
+    let fontSize = 36; // Starting font size
+    let textFits = false;
+
+    while (!textFits && fontSize > 0) {
+        // Set the font size
+        questionText.style.fontSize = `${fontSize}px`;
+
+        // Check if text fits
+        const textWidth = questionText.scrollWidth;
+        const textHeight = questionText.scrollHeight;
+
+        // Check if text overflows
+        textFits = textWidth <= containerWidth && textHeight <= containerHeight;
+
+        if (!textFits) {
+            // Reduce font size and check again
+            fontSize -= 1;
+        }
+    }
+
+    // Final adjustment if no fitting size is found
+    questionText.style.fontSize = `${fontSize}px`;
 }
 
 // Main function
@@ -124,10 +156,17 @@ function Page() {
         if (questionNumber < questions.length - 1) {
             setQuestionNumber(prevQuestion => prevQuestion + 1);
         } else {
-            // Quiz is complete, handle end of quiz scenario (e.g., show results)
+            // Quiz is complete
+            // Need to fix this to go to the end screen !!!!!!!!!
             console.log('Quiz complete. User points:', userPoints);
         }
     };
+
+    useEffect(() => {
+        adjustFontSize();
+        window.addEventListener('resize', adjustFontSize);
+        return () => window.removeEventListener('resize', adjustFontSize);
+    }, []);
 
     const currentQuestion = questions[questionNumber];
 
@@ -136,7 +175,7 @@ function Page() {
             <div className = 'table'>
                 <div className = "questionDiv">
                     <div className = "questionText">
-                        {currentQuestion.name}
+                        Question {questionNumber + 1}: {currentQuestion.name}
                     </div>
                 </div>
                 <div className = "buttonDiv">
