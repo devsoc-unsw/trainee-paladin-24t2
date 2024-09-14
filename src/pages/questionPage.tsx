@@ -1,10 +1,17 @@
 import { useState, useEffect } from "react";
 import './questionPage.css';
-// import jsonData from '../pages/test.json';
 import jsonData from '../pages/questions.json';
 
-
-// JUST IMPORT THIS INTO app.tsx and RUN ON THE ONE PAGE :))
+// IM SORRY
+import q1Image from '../assets/q1.jpeg';
+import q2Image from '../assets/q2.jpeg';
+import q3Image from '../assets/q3.jpeg';
+import q4Image from '../assets/q4.jpeg';
+import q5Image from '../assets/q5.jpeg';
+import q6Image from '../assets/q6.jpeg';
+import q7Image from '../assets/q7.jpeg';
+import q8Image from '../assets/q8.jpeg';
+let imageArray = [q1Image,q2Image,q3Image,q4Image,q5Image,q6Image,q7Image,q8Image];
 
 // INTERFACE
 
@@ -27,6 +34,8 @@ interface answerStruct {
 interface questionDetail {
     name: String,
     number: number,
+    title: string,
+    subtitle: string,
     answers: answerStruct[],
 };
 
@@ -37,6 +46,8 @@ interface jsonInterface {
     questions: {
         name: string; 
         number: number; 
+        title: string;
+        subtitle: string;
         answers: {
             title: string; 
             points: number[]; 
@@ -80,6 +91,8 @@ function questionSetup(loadData) { // Issue where the code doesnt
         let question: questionDetail = {
             name: currQ.name,
             number: currQ.number,
+            title: currQ.title,
+            subtitle: currQ.subtitle,
             answers: answers,
         };
         questions.push(question);
@@ -95,22 +108,18 @@ function adjustFontSize() {
     const containerWidth = questionText.parentElement?.clientWidth || 0;
     const containerHeight = questionText.parentElement?.clientHeight || 0;
 
-    let fontSize = 36; // Starting font size
+    let fontSize = 36;
     let textFits = false;
 
     while (!textFits && fontSize > 0) {
-        // Set the font size
         questionText.style.fontSize = `${fontSize}px`;
 
-        // Check if text fits
         const textWidth = questionText.scrollWidth;
         const textHeight = questionText.scrollHeight;
 
-        // Check if text overflows
         textFits = textWidth <= containerWidth && textHeight <= containerHeight;
 
         if (!textFits) {
-            // Reduce font size and check again
             fontSize -= 1;
         }
     }
@@ -172,10 +181,22 @@ function Page() {
 
     return (
         <div className = "mainBody">
+            <div className="imageContainer">
+                <img
+                src= {imageArray[questionNumber]}
+                alt={`Image for question ${currentQuestion.number}`}
+                className="questionImage"
+                />
+                <div className="imageCaption">
+                    {currentQuestion.subtitle}
+                </div>
+            </div>
+            
             <div className = 'table'>
                 <div className = "questionDiv">
                     <div className = "questionText">
-                        Question {questionNumber + 1}: {currentQuestion.name}
+                        CS {currentQuestion.title}: {currentQuestion.name}
+                        {/* Question {questionNumber + 1}: {currentQuestion.name} */}
                     </div>
                 </div>
                 <div className = "buttonDiv">
@@ -191,6 +212,7 @@ function Page() {
                 </div>
             </div>
         </div>
+        
     );
 }
 
