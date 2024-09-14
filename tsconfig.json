@@ -6,5 +6,15 @@
   ],
   "compilerOptions": {
     "resolveJsonModule": true, // Added as I was trying to fix a JSON issue
+    "target": "es6",
+    "module": "commonjs",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   }
 }

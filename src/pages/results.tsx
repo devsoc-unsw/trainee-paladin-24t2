@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, BrowserRouter } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
+
 import ArchetypeInfo from './archetypeInfo';
 import weebImage from '../assets/weeb.jpg';
 import yapperImage from '../assets/yapper.webp';
