@@ -8,7 +8,8 @@ import Page from "./pages/questionPage.tsx"
 function App() {
   const [count, setCount] = useState(0)
 
-  // Used to Clear content
+  // Used to Clear content (currently used by Alex to quickly switch from the default
+  // screen to the question page)
   const [isContentVisible, setContentVisible] = useState(false);
   const handleDeleteContent = () => {
     isContentVisible === true ? setContentVisible(false) : setContentVisible(true); 
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <>
+      {/* Will disappear after button press, remove after start page has been made */}
       {!isContentVisible && (
         <div className="card">
           <div>
@@ -46,7 +48,7 @@ function App() {
         </div>
       )}
 
-      {/* Conditionally render the Page component */}
+      {/* Conditionally render the Page component on button press */}
       {isContentVisible && (
         <Page />
       )}
