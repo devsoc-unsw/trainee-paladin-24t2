@@ -4,6 +4,8 @@
         {
             "name": "What is your preferred IDE?",
             "number": 1,
+            "title": "IDE",
+            "subtitle": "Surely you're a notepad kind of person",
             "answers": [
                 {
                     "title": "VSCode",
@@ -24,15 +26,17 @@
             ]
         },
         {
-            "name": "When working on an assignment what do you do first?                                      fsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsd",
+            "name": "When working on an assignment what is the first thing you do?",
             "number": 2,
+            "title": "Assignment",
+            "subtitle": "STAGE 4 PAIN 😭",
             "answers": [
                 {
                     "title": "Write some documentation and comments for each function",
                     "points": [0, 8, 9, 0, 0, 0, 0, 0]
                 },
                 {
-                    "title": "Just start programming away, style is for the last day",
+                    "title": "Start programming without any regard for style.",
                     "points": [0, 0, 8, 0, 0, 9, 8, 0]
                 },
                 {
@@ -40,7 +44,7 @@
                     "points": [0, 0, 0, 0, 0, 0, 0, 10]
                 },
                 {
-                    "title": "Smth else",
+                    "title": "Procrastinate till the last day",
                     "points": [0, 0, 0, 0, 0, 0, 0, 0]
                 }
             ]
@@ -48,6 +52,8 @@
         {
             "name": "How do you debug and troubleshoot logic and runtime errors?",
             "number": 3,
+            "title": "Bugs",
+            "subtitle": "forgetting the ;, -> and ++ 💀",
             "answers": [
                 {
                     "title": "Spam a lot of printf and console.log",
@@ -66,6 +72,8 @@
         {
             "name": "What does your ideal programming language do?",
             "number": 4,
+            "title": "Languages",
+            "subtitle": "There are 10 kinds of people who understand binary",
             "answers": [
                 {
                     "title": "Lets me make the best/most efficient use of the computer's resources",
@@ -84,6 +92,8 @@
         {
             "name": "White space, indentation and spacing should be used…",
             "number": 5,
+            "title": "Style 💀",
+            "subtitle": "wheres the whitespace?",
             "answers": [
                 {
                     "title": "Sparingly",
@@ -102,6 +112,8 @@
         {
             "name": "What are comments in your program used for?",
             "number": 6,
+            "title": "Comments",
+            "subtitle": "// Easiest style marks",
             "answers": [
                 {
                     "title": "To explain any ambiguity in a function/operation",
@@ -113,6 +125,48 @@
                 },
                 {
                     "title": "What are comments?",
+                    "points": [0, 0, 0, 0, 0, 10, 10, 0]
+                }
+            ]
+        },{
+            "name": "You are in your penultimate year of your CS degree and currently intern-less. How desperate are you to get an internship before grad?",
+            "number": 7,
+            "title": "Intern",
+            "subtitle": "Doomed in the CS market 💀",
+            "answers": [
+                {
+                    "title": "Feel sadge & just graduate without one",
+                    "points": [0, 0, 0, 10, 0, 0, 0, 0]
+                },
+                {
+                    "title": "Kill for one 🔪🩸",
+                    "points": [0, 0, 0, 10, 0, 0, 0, 0]
+                },
+                {
+                    "title": "BACK ON THE LEETCODE GRIND 💪",
+                    "points": [0, 0, 10, 0, 0, 0, 0, 0]
+                },
+                {
+                    "title": "Beg friends for recommendations",
+                    "points": [0, 0, 0, 0, 0, 10, 10, 0]
+                }
+            ]
+        },{
+            "name": "You decided it was a terrific idea to leave all your studying for your COMP course till the last night! It is now the last night, do you:",
+            "number": 8,
+            "title": "Procrastination",
+            "subtitle": "hope you pass those hurdles",
+            "answers": [
+                {
+                    "title": "COMMIT THE ALL NIGHTER!!!!",
+                    "points": [0, 0, 0, 10, 0, 0, 0, 0]
+                },
+                {
+                    "title": "Sleep and hope for the best.",
+                    "points": [0, 0, 10, 0, 0, 0, 0, 0]
+                },
+                {
+                    "title": "Go back and procrastinate again!",
                     "points": [0, 0, 0, 0, 0, 10, 10, 0]
                 }
             ]
