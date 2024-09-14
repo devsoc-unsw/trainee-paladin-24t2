@@ -53,7 +53,7 @@
             "name": "How do you debug and troubleshoot logic and runtime errors?",
             "number": 3,
             "title": "Bugs",
-            "subtitle": "forgetting the ;, -> and ++ 💀",
+            "subtitle": "forgetting the ; and -> and ++ 💀",
             "answers": [
                 {
                     "title": "Spam a lot of printf and console.log",
