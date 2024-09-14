@@ -25,22 +25,22 @@ interface pointAssignment {
 const archetypes = {
   weeb: {
     name: 'CS Weeb',
-    description: 'UwU, random cat noises and stuff. You enjoy finding the anime in compsci.',
+    description: 'UwU, random cat noises and stuff. You enjoy finding the anime in Compsci.',
     image: weebImage
   },
   yapper: {
     name: 'CS Yapper',
-    description: '',
+    description: 'After graduating with a degree of Yappology at the University of Yappington, you endeavour to yap to all your friends about any tiny aspect of Compsci. ',
     image: yapperImage
   },
   sage: {
     name: 'Light Mode Sage',
-    description: '',
+    description: 'You have just entered the world of Computer Science, eagerly awaiting to explore what this realm has to offer. Or you\'re straight up sociopathic with your light mode usage',
     image: sageImage
   },
   atlassian: {
     name: 'Aidan from Atlassian',
-    description: '',
+    description: 'You are the embodiment of overqualified, the 10 year old with 20 years of experience. You are on your 5th internship in university waiting to finish that last COMP course and when you do, all the big tech companies are lining up ready to hire you.',
     image: atlassianImage
   },
   money: {
@@ -50,17 +50,17 @@ const archetypes = {
   },
   skeptic: {
     name: 'Documentation Skeptic',
-    description: '',
+    description: 'Your sheer disregard for any documentation is quite profound. You are the embodiment of rawdogging a flight, just writing a program without a clear plan in mind or commenting, hoping to get it all done.',
     image: skepticImage
   },
   longAsItWorks: {
     name: 'As long as it works',
-    description: 'As long as the project works it doesn\'t matter what the program looks like! Your disregard for efficiency and style is balanced with your mentality to make a working solution.',
+    description: 'As long as the project works it doesn\'t matter what the program looks like! Your disregard for efficiency and style is balanced with your mentality to make a working solution. This however bites you in the back, when you have to modify your program and realise that you named all your variables in some variation of: a, temp and fjdkfjds',
     image: longAsItWorksImage
   },
   aesthetics: {
     name: 'Aesthetic achiever',
-    description: 'You are an individual dedicated to maintain the style and aesthetics of your code. Everything from your environment to code has to be well kept and maintained.',
+    description: 'You are an individual dedicated to maintain the style and aesthetics of your code. Everything from your environment to code has to be well kept and maintained. Unfortunately your greatest strength is your greatest pitfall, your obsession with appealing code results in you spending your whole COMP1531 ranting to your groupmates about style and not getting any work done.',
     image: aestheticsImage
   }
 };
