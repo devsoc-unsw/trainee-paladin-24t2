@@ -1,0 +1,79 @@
+.mainBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* FIX SO THAT THE HEIGHT IS NOT BUGGED!!! */
+    background: #0E0E0E;
+    margin: 0; /* Removes default margin */
+}
+
+/* Centers the table within the mainBody */
+.table {
+    width: 100%;
+    max-width: 1076px; /* Constrain maximum width */
+    height: auto; /* Adjust height automatically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.questionDiv {
+    width: 100%;
+    max-width: 1071px; /* Constrain maximum width */
+    height: 150px; /* Fixed height for the container */
+    padding: 8px 15px; /* Padding inside the container */
+    background: #171717;
+    border-radius: 20px;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.questionText {
+    width: 100%; /* Full width of the parent */
+    text-align: center; /* Center text horizontally */
+    color: white;
+    font-size: 36px; /* Starting font size */
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 300;
+    line-height: 1.2; /* Adjust line height for readability */
+    overflow: hidden; /* Hide overflow text */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Center the buttons in a column */
+.buttonDiv {
+    width: 100%;
+    max-width: 1071px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles for the buttons */
+.answerButton {
+    width: 100%;
+    min-width: 800px;
+    max-width: 1071px;
+    height: 96px;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: rgba(200, 200, 200, 0.30);
+    border-radius: 106px;
+    border: 4px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    outline: none;
+}

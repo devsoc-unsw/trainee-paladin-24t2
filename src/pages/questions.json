@@ -1,0 +1,121 @@
+{
+    "numOfQuestions": 6,
+    "questions": [
+        {
+            "name": "What is your preferred IDE?",
+            "number": 1,
+            "answers": [
+                {
+                    "title": "VSCode",
+                    "points": [0, 0, 0, 0, 0, 0, 0, 10]
+                },
+                {
+                    "title": "VIM",
+                    "points": [0, 5, 8, 7, 0, 6, 0, 0]
+                },
+                {
+                    "title": "Gedit / whatever’s on VLAB tbh",
+                    "points": [0, 6, 0, 0, 10, 7, 0, 0]
+                },
+                {
+                    "title": "No preference",
+                    "points": [0, 0, 0, 0, 0, 0, 10, 0]
+                }
+            ]
+        },
+        {
+            "name": "When working on an assignment what do you do first?                                      fsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsdfsdfsdfsdfsdsd",
+            "number": 2,
+            "answers": [
+                {
+                    "title": "Write some documentation and comments for each function",
+                    "points": [0, 8, 9, 0, 0, 0, 0, 0]
+                },
+                {
+                    "title": "Just start programming away, style is for the last day",
+                    "points": [0, 0, 8, 0, 0, 9, 8, 0]
+                },
+                {
+                    "title": "Start programming but spend time consistently maintaining style",
+                    "points": [0, 0, 0, 0, 0, 0, 0, 10]
+                },
+                {
+                    "title": "Smth else",
+                    "points": [0, 0, 0, 0, 0, 0, 0, 0]
+                }
+            ]
+        },
+        {
+            "name": "How do you debug and troubleshoot logic and runtime errors?",
+            "number": 3,
+            "answers": [
+                {
+                    "title": "Spam a lot of printf and console.log",
+                    "points": [0, 0, 8, 0, 0, 10, 8, 0]
+                },
+                {
+                    "title": "Elegantly use breakpoints, watch expressions and step-by-step executions",
+                    "points": [0, 8, 0, 10, 0, 0, 0, 9]
+                },
+                {
+                    "title": "Smth else",
+                    "points": [0, 0, 0, 0, 0, 0, 0, 0]
+                }
+            ]
+        },
+        {
+            "name": "What does your ideal programming language do?",
+            "number": 4,
+            "answers": [
+                {
+                    "title": "Lets me make the best/most efficient use of the computer's resources",
+                    "points": [0, 0, 10, 0, 0, 0, 0, 0]
+                },
+                {
+                    "title": "Lets anyone program (high level or smth)",
+                    "points": [0, 0, 0, 10, 0, 0, 0, 0]
+                },
+                {
+                    "title": "Doesn't matter",
+                    "points": [0, 0, 0, 0, 0, 0, 10, 0]
+                }
+            ]
+        },
+        {
+            "name": "White space, indentation and spacing should be used…",
+            "number": 5,
+            "answers": [
+                {
+                    "title": "Sparingly",
+                    "points": [0, 0, 0, 0, 0, 0, 0, 10]
+                },
+                {
+                    "title": "Everywhere",
+                    "points": [0, 0, 0, 0, 0, 0, 0, 10]
+                },
+                {
+                    "title": "Randomly",
+                    "points": [0, 0, 0, 0, 0, 10, 0, 0]
+                }
+            ]
+        },
+        {
+            "name": "What are comments in your program used for?",
+            "number": 6,
+            "answers": [
+                {
+                    "title": "To explain any ambiguity in a function/operation",
+                    "points": [0, 0, 0, 10, 0, 0, 0, 0]
+                },
+                {
+                    "title": "To explain EVERYTHING",
+                    "points": [0, 0, 10, 0, 0, 0, 0, 0]
+                },
+                {
+                    "title": "What are comments?",
+                    "points": [0, 0, 0, 0, 0, 10, 10, 0]
+                }
+            ]
+        }
+    ]
+}
