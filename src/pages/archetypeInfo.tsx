@@ -14,7 +14,7 @@ const ArchetypeInfo: React.FC<ArchetypeProps> = ({
   return (
     
     <div className="archetype-container">
-      <h1>YOUR ARCHETYPE</h1>
+      <h1 className = "h1Custom" >YOUR ARCHETYPE</h1>
       <div className="archetype-image">
         <img src={archetypeImage} alt={`${archetypeName} image`} />
       </div>

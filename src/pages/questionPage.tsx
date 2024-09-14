@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import './questionPage.css';
 import jsonData from '../pages/questions.json';
+import Results from "../pages/archetypeInfo.tsx"
 
 // IM SORRY
 import q1Image from '../assets/q1.jpeg';
@@ -148,6 +149,7 @@ function Page() {
         longAsItWorks: 0,
         aesthetics: 0,
     });
+    const [resultScreen, setResultScreen] = useState(false);
 
     const handleButtonClick = (answerPoints: pointAssignment) => {
         // Update user points based on selected answer
@@ -169,6 +171,7 @@ function Page() {
             // Quiz is complete
             // Need to fix this to go to the end screen !!!!!!!!!
             console.log('Quiz complete. User points:', userPoints);
+            setResultScreen(true);
         }
     };
 
@@ -181,39 +184,49 @@ function Page() {
     const currentQuestion = questions[questionNumber];
 
     return (
-        <div className = "mainBody">
-            <div className="imageContainer">
-                <img
-                src= {imageArray[questionNumber]}
-                alt={`Image for question ${currentQuestion.number}`}
-                className="questionImage"
-                />
-                <div className="imageCaption">
-                    {currentQuestion.subtitle}
-                </div>
-            </div>
-            
-            <div className = 'table'>
-                <div className = "questionDiv">
-                    <div className = "questionText">
-                        CS {currentQuestion.title}: {currentQuestion.name}
-                        {/* Question {questionNumber + 1}: {currentQuestion.name} */}
+        <>
+        {!resultScreen && (
+
+            <div className = "mainBody">
+                <div className="imageContainer">
+                    <img
+                    src= {imageArray[questionNumber]}
+                    alt={`Image for question ${currentQuestion.number}`}
+                    className="questionImage"
+                    />
+                    <div className="imageCaption">
+                        {currentQuestion.subtitle}
                     </div>
                 </div>
-                <div className = "buttonDiv">
-                    {currentQuestion.answers.map((answer, index) => (
-                        <button
-                            key={index}
-                            className="answerButton"
-                            onClick={() => handleButtonClick(answer.points)}
-                        >
-                            {answer.title}
-                        </button>
-                    ))}
+                
+                <div className = 'table'>
+                    <div className = "questionDiv">
+                        <div className = "questionText">
+                            CS {currentQuestion.title}: {currentQuestion.name}
+                            {/* Question {questionNumber + 1}: {currentQuestion.name} */}
+                        </div>
+                    </div>
+                    <div className = "buttonDiv">
+                        {currentQuestion.answers.map((answer, index) => (
+                            <button
+                                key={index}
+                                className="answerButton"
+                                onClick={() => handleButtonClick(answer.points)}
+                            >
+                                {answer.title}
+                            </button>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
-        
+        )};
+         {resultScreen && (
+            <div>
+                <Results />
+            </div>
+        )};
+
+        </>
     );
 }
 
