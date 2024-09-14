@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import ArchetypeInfo from './archetypeInfo';
+import weebImage from './assets/weeb.jpg';
+import yapperImage from './assets/yapper.webp';
+import sageImage from './assets/sage.jpeg';
+import atlassianImage from './assets/atlassian.png';
+import moneyImage from './assets/money.jpeg';
+import skepticImage from './assets/skeptic.png'
+import longAsItWorksImage from './assets/aslongasitworks.png'
+import aestheticsImage from './assets/aesthetics.jpg'
 
 interface pointAssignment {
     weeb: number,
@@ -13,47 +21,46 @@ interface pointAssignment {
     aesthetics: number,
 };
 
-
 const archetypes = {
   weeb: {
     name: 'The Weeb',
     description: '',
-    image: 'https://via.placeholder.com/300x200', 
+    image: weebImage, 
   },
   yapper: {
     name: 'The Yapper',
     description: '',
-    image: 'https://via.placeholder.com/300x200',
+    image: yapperImage,
   },
   sage: {
     name: 'The Sage',
     description: '',
-    image: 'https://via.placeholder.com/300x200',
+    image: sageImage,
   },
   atlassian: {
     name: 'The Atlassian',
     description: '',
-    image: 'https://via.placeholder.com/300x200',
+    image: atlassianImage,
   },
   money: {
     name: 'The Money Lover',
     description: '',
-    image: 'https://via.placeholder.com/300x200',
+    image: moneyImage,
   },
   skeptic: {
     name: 'The Skeptic',
     description: '',
-    image: 'https://via.placeholder.com/300x200',
+    image: skepticImage,
   },
   longAsItWorks: {
     name: 'The AsLongAsItWorks',
     description: '',
-    image: 'https://via.placeholder.com/300x200',
+    image: longAsItWorksImage,
   },
   aesthetics: {
     name: 'The Aesthetic',
     description: '',
-    image: 'https://via.placeholder.com/300x200',
+    image: aestheticsImage,
   }
 };
 
@@ -61,7 +68,7 @@ const results: React.FC = () => {
     const location = useLocation();
     const [finalArchetype, setFinalArchetype] = useState<keyof pointAssignment | null>(null);
   
-    // const points = location.state?.points as pointAssignment;
+    const points = location.state?.points as pointAssignment;
   
     useEffect(() => {
       const calculateFinalArchetype = () => {
