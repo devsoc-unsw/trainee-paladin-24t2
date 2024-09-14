@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import './questionPage.css';
 import jsonData from '../pages/questions.json';
-import Results from "../pages/results.tsx"
-import { BrowserRouter } from 'react-router-dom';
+import {Results} from "../pages/results.tsx"
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // IM SORRY
 import q1Image from '../assets/q1.jpeg';
@@ -225,14 +225,9 @@ function Page() {
                 </div>
             </div>
         )};
-         {resultScreen && (
-            <BrowserRouter>
-                <Results
-
-                />
-            </BrowserRouter>
-        )};
-
+        {resultScreen && (
+            <Results userPoints={userPoints} />
+        )}
         </>
     );
 }
