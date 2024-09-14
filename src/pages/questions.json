@@ -9,7 +9,7 @@
             "answers": [
                 {
                     "title": "VSCode",
-                    "points": [1, 0, 4, 0, 0, 0, 0, 5]
+                    "points": [1, 0, 4, 0, 1, 0, 0, 5]
                 },
                 {
                     "title": "VIM",
@@ -21,7 +21,7 @@
                 },
                 {
                     "title": "No preference",
-                    "points": [1, 0, 0, 0, 0, 0, 5, 0]
+                    "points": [1, 0, 0, 0, 3, 0, 5, 0]
                 }
             ]
         },
@@ -33,7 +33,7 @@
             "answers": [
                 {
                     "title": "Write some documentation and comments for each function",
-                    "points": [0, 5, 0, 5, 1, 0, 0, 0]
+                    "points": [0, 5, 0, 5, 2, 0, 0, 0]
                 },
                 {
                     "title": "Start programming without any regard for style.",
@@ -57,7 +57,7 @@
             "answers": [
                 {
                     "title": "Spam a lot of printf and console.log",
-                    "points": [2, 0, 5, 0, 0, 5, 5, 0]
+                    "points": [2, 0, 5, 0, 4, 5, 5, 0]
                 },
                 {
                     "title": "Elegantly use breakpoints, watch expressions and step-by-step executions",
@@ -65,7 +65,7 @@
                 },
                 {
                     "title": "Go to Stack Overflow",
-                    "points": [2, 0, 0, 3, 0, 0, 3, 0]
+                    "points": [2, 0, 0, 3, 3, 0, 3, 0]
                 }
             ]
         },
@@ -97,7 +97,7 @@
             "answers": [
                 {
                     "title": "Sparingly",
-                    "points": [0, 0, 4, 0, 0, 2, 0, 2]
+                    "points": [0, 0, 4, 0, 3, 2, 0, 2]
                 },
                 {
                     "title": "Everywhere",
@@ -105,7 +105,7 @@
                 },
                 {
                     "title": "Randomly",
-                    "points": [2, 0, 1, 0, 0, 5, 5, 0]
+                    "points": [2, 0, 1, 0, 3, 5, 5, 0]
                 }
             ]
         },
@@ -121,11 +121,11 @@
                 },
                 {
                     "title": "To explain EVERYTHING",
-                    "points": [2, 1, 5, 0, 0, 0, 0, 0]
+                    "points": [2, 1, 5, 0, 3, 0, 0, 0]
                 },
                 {
                     "title": "What are comments?",
-                    "points": [0, 0, 0, 0, 0, 5, 5, 0]
+                    "points": [0, 0, 0, 0, 2, 5, 5, 0]
                 }
             ]
         },{
@@ -136,15 +136,15 @@
             "answers": [
                 {
                     "title": "Feel sadge & just graduate without one",
-                    "points": [0, 0, 3, 0, 0, 0, 0, 0]
+                    "points": [0, 0, 3, 0, 2, 0, 0, 0]
                 },
                 {
                     "title": "Kill for one 🔪🩸",
-                    "points": [5, 0, 0, 0, 0, 0, 4, 0]
+                    "points": [5, 0, 0, 0, 2, 0, 4, 0]
                 },
                 {
                     "title": "BACK ON THE LEETCODE GRIND 💪",
-                    "points": [0, 5, 0, 5, 0, 0, 0, 0]
+                    "points": [0, 5, 0, 5, 1, 0, 0, 0]
                 },
                 {
                     "title": "Beg friends for recommendations",
@@ -159,15 +159,15 @@
             "answers": [
                 {
                     "title": "COMMIT THE ALL NIGHTER!!!!",
-                    "points": [4, 5, 2, 5, 0, 0, 3, 0]
+                    "points": [4, 5, 2, 5, 2, 0, 3, 0]
                 },
                 {
                     "title": "Sleep and hope for the best.",
-                    "points": [0, 0, 2, 0, 0, 0, 3, 0]
+                    "points": [0, 0, 2, 0, 2, 0, 3, 0]
                 },
                 {
                     "title": "Go back and procrastinate again!",
-                    "points": [0, 0, 3, 0, 0, 0, 0, 0]
+                    "points": [0, 0, 3, 0, 5, 0, 0, 0]
                 }
             ]
         },
@@ -179,7 +179,7 @@
             "answers": [
                 {
                     "title": "Yes",
-                    "points": [1000, 0, 0, 0, 0, 0, 0, 0]
+                    "points": [20, 0, 0, 0, 0, 0, 0, 0]
                 },
                 {
                     "title": "No",

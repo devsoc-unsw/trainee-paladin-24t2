@@ -24,43 +24,43 @@ interface pointAssignment {
 
 const archetypes = {
   weeb: {
-    name: 'The Weeb',
+    name: 'CS Weeb',
     description: 'UwU, random cat noises and stuff. You enjoy finding the anime in compsci.',
     image: weebImage
   },
   yapper: {
-    name: 'The Yapper',
+    name: 'CS Yapper',
     description: '',
     image: yapperImage
   },
   sage: {
-    name: 'The Sage',
+    name: 'Light Mode Sage',
     description: '',
     image: sageImage
   },
   atlassian: {
-    name: 'The Atlassian',
+    name: 'Aidan from Atlassian',
     description: '',
     image: atlassianImage
   },
   money: {
     name: 'The Money Lover',
-    description: '',
+    description: `I don't get the way you guys think. I want MONEY. 6 figures right out of college. 200k a year entry level. I'm in this for MONEY. I don't care about whether I'm "fulfilled" I want MONEY. Whatever gets me the most MONEY. What do I need on my resume to get the most MONEY. What technology gets me PAID THE BEST. All I care about in this major is MONEY. That's why I'm in college, I don't wanna laugh and play with y'all. I don't wanna be buddy buddy with y'all. I'm here for MONEY.`,
     image: moneyImage
   },
   skeptic: {
-    name: 'The Skeptic',
+    name: 'Documentation Skeptic',
     description: '',
     image: skepticImage
   },
   longAsItWorks: {
-    name: 'The AsLongAsItWorks',
+    name: 'As long as it works',
     description: 'As long as the project works it doesn\'t matter what the program looks like! Your disregard for efficiency and style is balanced with your mentality to make a working solution.',
     image: longAsItWorksImage
   },
   aesthetics: {
-    name: 'The Aesthetic',
-    description: '',
+    name: 'Aesthetic achiever',
+    description: 'You are an individual dedicated to maintain the style and aesthetics of your code. Everything from your environment to code has to be well kept and maintained.',
     image: aestheticsImage
   }
 };
