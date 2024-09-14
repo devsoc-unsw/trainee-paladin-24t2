@@ -35,7 +35,7 @@ const archetypes = {
   },
   sage: {
     name: 'Light Mode Sage',
-    description: 'You have just entered the world of Computer Science, eagerly awaiting to explore what this realm has to offer. Or you\'re straight up sociopathic with your light mode usage',
+    description: 'You have just entered the world of Computer Science, eagerly awaiting to explore what this realm has to offer. Or you are a straight up sociopathic with your light mode usage',
     image: sageImage
   },
   atlassian: {
