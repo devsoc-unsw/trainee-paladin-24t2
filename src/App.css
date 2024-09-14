@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -40,3 +42,90 @@
 .read-the-docs {
   color: #888;
 }
+
+* ParticleBackground.css */
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none; /* Ensure particles don't interfere with other elements */
+}
+
+.diagonal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 1) 50%, rgba(255, 255, 255, 0.00) 50%);
+  z-index: 1;
+}
+
+.diagonal-bg::before {
+  content: '';
+  position: absolute;
+  top: 50%; /* Vertically center the diagonal line */
+  left: -25vw; /* Start slightly outside the viewport on the left */
+  width: 150vw; /* Make sure the line spans outside the viewport */
+  height: 2px; /* Thickness of the diagonal line */
+  background-color: white; /* Color of the diagonal line */
+  transform: rotate(-45deg); /* Create the diagonal line */
+  transform-origin: center; /* Ensure it rotates around the center */
+  z-index: 0; /* Ensure it appears behind other elements */
+}
+
+.title {
+  position: absolute;
+  top: 7vh;
+  left: 5%;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4.5rem; /* Slightly larger for emphasis */
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+
+.subtitle {
+  position: absolute;
+  top: 25vh;
+  left: 5%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+.arrow-btn {
+  position: absolute; 
+  bottom: 40px;
+  right: 40px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white; 
+  font-family: 'Roboto ', sans-serif;
+  font-size: 1.7rem;
+  cursor: pointer;
+  z-index: 3;
+  border-radius: 0 0 0 0; /* Rounded corners on the left side */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Outer glow effect */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Slight white background on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* Stronger glow on hover */
+  color: #ffffff; /* Ensure the text stays white */
+}
+
+.arrow-btn:hover::after {
+  border-left-color: rgba(255, 255, 255, 0.8); /* Brighten triangle on hover */
+}
+
