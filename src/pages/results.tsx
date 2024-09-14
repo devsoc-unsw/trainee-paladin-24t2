@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import ArchetypeInfo from './archetypeInfo';
-import weebImage from './assets/weeb.jpg';
-import yapperImage from './assets/yapper.webp';
-import sageImage from './assets/sage.jpeg';
-import atlassianImage from './assets/atlassian.png';
-import moneyImage from './assets/money.jpeg';
-import skepticImage from './assets/skeptic.png'
-import longAsItWorksImage from './assets/aslongasitworks.png'
-import aestheticsImage from './assets/aesthetics.jpg'
+import weebImage from '../assets/weeb.jpg';
+import yapperImage from '../assets/yapper.webp';
+import sageImage from '../assets/sage.jpeg';
+import atlassianImage from '../assets/atlassian.png';
+import moneyImage from '../assets/money.jpeg';
+import skepticImage from '../assets/skeptic.png'
+import longAsItWorksImage from '../assets/aslongasitworks.png'
+import aestheticsImage from '../assets/aesthetics.jpg'
 
 interface pointAssignment {
     weeb: number,
@@ -64,7 +64,7 @@ const archetypes = {
   }
 };
 
-const results: React.FC = () => {
+const Results: React.FC = () => {
     const location = useLocation();
     const [finalArchetype, setFinalArchetype] = useState<keyof pointAssignment | null>(null);
   
@@ -103,4 +103,4 @@ const results: React.FC = () => {
     );
   };
   
-export default results;
+export default Results;
