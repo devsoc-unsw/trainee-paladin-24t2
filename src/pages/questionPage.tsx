@@ -14,7 +14,8 @@ import q6Image from '../assets/q6.jpeg';
 import q7Image from '../assets/q7.jpeg';
 import q8Image from '../assets/q8.jpeg';
 import q9Image from '../assets/q9.jpeg';
-let imageArray = [q1Image,q2Image,q3Image,q4Image,q5Image,q6Image,q7Image,q8Image,q9Image];
+import q10Image from '../assets/q10.jpeg';
+let imageArray = [q1Image,q2Image,q3Image,q4Image,q5Image,q6Image,q7Image,q8Image,q9Image,q10Image];
 
 // INTERFACE
 
