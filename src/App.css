@@ -68,14 +68,14 @@
 .diagonal-bg::before {
   content: '';
   position: absolute;
-  top: 50%; /* Vertically center the diagonal line */
-  left: -25vw; /* Start slightly outside the viewport on the left */
-  width: 150vw; /* Make sure the line spans outside the viewport */
+  top: 50%;
+  left: -25vw; 
+  width: 150vw; 
   height: 2px; /* Thickness of the diagonal line */
-  background-color: white; /* Color of the diagonal line */
-  transform: rotate(-45deg); /* Create the diagonal line */
-  transform-origin: center; /* Ensure it rotates around the center */
-  z-index: 0; /* Ensure it appears behind other elements */
+  background-color: white;
+  transform: rotate(-45deg); 
+  transform-origin: center; 
+  z-index: 0; 
 }
 
 .title {
@@ -113,7 +113,7 @@
   font-size: 1.7rem;
   cursor: pointer;
   z-index: 3;
-  border-radius: 0 0 0 0; /* Rounded corners on the left side */
+  border-radius: 0 0 0 0; 
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Outer glow effect */
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -122,7 +122,7 @@
   background-color: rgba(255, 255, 255, 0.1); /* Slight white background on hover */
   transform: scale(1.05); /* Slight zoom effect on hover */
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* Stronger glow on hover */
-  color: #ffffff; /* Ensure the text stays white */
+  color: #ffffff;
 }
 
 .arrow-btn:hover::after {
