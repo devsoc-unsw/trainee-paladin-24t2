@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './archetypeInfo.css';
 interface ArchetypeProps {
   archetypeName: string;
   archetypeDescription: string;
@@ -12,6 +12,7 @@ const ArchetypeInfo: React.FC<ArchetypeProps> = ({
   archetypeImage,
 }) => {
   return (
+    
     <div className="archetype-container">
       <h1>YOUR ARCHETYPE</h1>
       <div className="archetype-image">
