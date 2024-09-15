@@ -1,12 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Page from "./pages/questionPage.tsx"
 import ParticlesComponent from './ConstellationBg.tsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+  //const [count, setCount] = useState(0)
 
   // Used to Clear content (currently used by Alex to quickly switch from the default
   // screen to the question page)

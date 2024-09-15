@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import './questionPage.css';
 import jsonData from '../pages/questions.json';
 import {Results} from "../pages/results.tsx"
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+//import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // IM SORRY
 import q1Image from '../assets/q1.jpeg';
@@ -64,7 +64,7 @@ interface jsonInterface {
 // Turns the JSON representations of questions into an object that can easily
 // be used in the quiz.
 // Outputs an array of questionDetail object members
-function questionSetup(loadData) { // Issue where the code doesnt
+function questionSetup(loadData: any) { // Issue where the code doesnt
     let questions: questionDetail[] = [];
 
     for (let i in loadData.questions) {
@@ -132,9 +132,9 @@ function adjustFontSize() {
     questionText.style.fontSize = `${fontSize}px`;
 }
 
-function findPersonality() {
+// function findPersonality() {
 
-};
+// };
 
 // Main function
 // Displays the screen that hosts all the questions and runs all the calculations

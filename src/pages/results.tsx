@@ -1,6 +1,5 @@
 // Results.tsx
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import ArchetypeInfo from './archetypeInfo';
 import weebImage from '../assets/weeb.jpg';
 import yapperImage from '../assets/yapper.webp';
@@ -25,7 +24,7 @@ interface pointAssignment {
 const archetypes = {
   weeb: {
     name: 'CS Weeb',
-    description: 'UwU, random cat noises and stuff. You enjoy finding the anime in Compsci, and squeezing in references whenever you can. The weebness in your bleeds into your Compsci degree as much as it bleeds into your everyday life - let\'s see your IDE\'s background O_O',
+    description: 'UwU, random cat noises and stuff. You enjoy finding the anime in Compsci, and squeezing in references whenever you can. The weebness in your bleeds into your Compsci degree as much as it bleeds into your everyday life - lets see your IDE\'s background O_O',
     image: weebImage
   },
   yapper: {

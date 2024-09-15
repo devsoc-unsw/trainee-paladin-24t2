@@ -1,17 +1,21 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useMemo, useState } from "react";
+import {
+    type ISourceOptions,
+  } from "@tsparticles/engine";
 // import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
 interface ParticlesComponentProps {
-    id: string;
+    id?: string;
 }
 
 const ParticlesComponent: React.FC<ParticlesComponentProps> = ({ id }) => {
-    const [init, setInit] = useState<boolean>(false);
+
     
+    const [init, setInit] = useState<boolean>(false);
     useEffect(() => {
         initParticlesEngine(async (engine: any) => {
             // This loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -27,9 +31,10 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = ({ id }) => {
 
     const particlesLoaded = (container: any) => {
         console.log(container);
+        return Promise.resolve(); 
     };
 
-    const options = useMemo(() => ({
+    const options: ISourceOptions  = useMemo(() => ({
         background: {
             color: {
                 value: "#000000",
@@ -96,8 +101,10 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = ({ id }) => {
         },
         detectRetina: true,
     }), []);
-
-    return <Particles id={id} init={particlesLoaded} options={options} />;
+    if (init) {
+        return <Particles id={id} particlesLoaded={particlesLoaded} options={options} />;
+    }
+    return <></>;
 };
 
 export default ParticlesComponent;
