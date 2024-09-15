@@ -25,12 +25,12 @@ interface pointAssignment {
 const archetypes = {
   weeb: {
     name: 'CS Weeb',
-    description: 'UwU, random cat noises and stuff. You enjoy finding the anime in Compsci.',
+    description: 'UwU, random cat noises and stuff. You enjoy finding the anime in Compsci, and squeezing in references whenever you can. The weebness in your bleeds into your Compsci degree as much as it bleeds into your everyday life - let\'s see your IDE\'s background O_O',
     image: weebImage
   },
   yapper: {
     name: 'CS Yapper',
-    description: 'After graduating with a degree of Yappology at the University of Yappington, you endeavour to yap to all your friends about any tiny aspect of Compsci. ',
+    description: 'After graduating with a degree of Yappology at the University of Yappington, you endeavour to yap to all your friends about any tiny aspect of Compsci. You probably have an obsession with something Compsci related like functional programming :^)',
     image: yapperImage
   },
   sage: {
@@ -50,7 +50,7 @@ const archetypes = {
   },
   skeptic: {
     name: 'Documentation Skeptic',
-    description: 'Your sheer disregard for any documentation is quite profound. You are the embodiment of rawdogging a flight, just writing a program without a clear plan in mind or commenting, hoping to get it all done.',
+    description: 'Your sheer disregard for any documentation is quite profound. You are the embodiment of rawdogging a flight, just writing a program without a clear plan in mind or commenting, hoping to get it all done. Any time you don\'t know how to write something, you ball.',
     image: skepticImage
   },
   longAsItWorks: {
@@ -60,7 +60,7 @@ const archetypes = {
   },
   aesthetics: {
     name: 'Aesthetic achiever',
-    description: 'You are an individual dedicated to maintain the style and aesthetics of your code. Everything from your environment to code has to be well kept and maintained. Unfortunately your greatest strength is your greatest pitfall, your obsession with appealing code results in you spending your whole COMP1531 ranting to your groupmates about style and not getting any work done.',
+    description: 'You are an individual dedicated to maintain the style and aesthetics of your code. Everything from your environment to code has to be well kept and maintained. If a solution works, how can you make it cleaner? Unfortunately your greatest strength is your greatest pitfall, your obsession with appealing code results in you spending your whole COMP1531 ranting to your groupmates about style and not getting any work done.',
     image: aestheticsImage
   }
 };
